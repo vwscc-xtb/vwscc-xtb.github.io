@@ -8,3 +8,4 @@ gem "jekyll-sitemap"        # always download the latest release
 
 gem "jekyll-remote-theme", "~> 0.4.3"
 gem 'jekyll-glossary_tooltip'
+

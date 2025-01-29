@@ -123,3 +123,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-glossary_tooltip
+
+just_the_docs:
+  enable_copy_code_button: true
+
