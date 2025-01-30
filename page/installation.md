@@ -80,10 +80,15 @@ meson setup build --buildtype=release
 meson compile -C build
 ```
 
+## External Driver Programs
+During the workshop, we will use external programs, namely *Conformer–Rotamer Ensemble Sampling Tool* (CREST) and *Command-line Energetic Sorting* (CENSO).
+The simplest way to install CREST is by downloading the [precompiled binaries](https://github.com/crest-lab/crest/releases), similar to xtb. Full installation instructions can be found [here](https://crest-lab.github.io/crest-docs/page/installation/install_basic.html).
+The installation instructions for CENSO can be found in the [official project repository](https://github.com/grimme-lab/CENSO).
+
 
 ## Utility Tools
 During the course of the workshop, you will also need to visualize molecular structures.
-The required graphical user interfaces (GUIs) include [Avogadro](https://avogadro.cc/), [Molden](https://www.theochem.ru.nl/molden/), and others.
+The required graphical user interfaces (GUIs) include [Avogadro](https://avogadro.cc/), [Molden](https://www.theochem.ru.nl/molden/), Chimerax and others.
 Additionally, you should have a text editor (e.g., vim, nano, VSCode) to edit input files and adjust calculation parameters as needed.
 
 

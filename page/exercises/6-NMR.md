@@ -200,6 +200,7 @@ orcaversion = 6.0.1
 CENSO will write output for all parts in text-format, as well as in json-format (`.out` and `.json` files). 
 You will also find ensembles in xyz-format, as well as all files generated using the run in your working directory, sorted by section.
 \\
-In the printout of the program and in the 4 NMR.out file you will find the ensemble--averaged NMR parameters. 
+In the printout of the program and in the 4 NMR.out file you will find the ensemble--averaged NMR parameters.
+Sodium trimethylsilylpropanesulfonate (DSS) is used as the NMR standard, and the spectrum is recorded at a frequency of 600 MHz in aqueous solution.
 Compare the ensemble--averaged values and the values for the lowest conformer only to the provided experimental reference values.
 

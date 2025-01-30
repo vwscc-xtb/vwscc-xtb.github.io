@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MOF
+title: MOM
 full_title: Metal 
 parent: "Exercises"
 nav_order: 1
@@ -28,9 +28,6 @@ Compare the 4 geometries by visually overlaying within e.g. [Chimera](https://ww
 {% include command.html cmd="xtb humjil.xyz <span class='nt'>--opt --gff --alpb thf</span> > opt.out &" %}
 {% include command.html cmd="xtb humjil.xyz <span class='nt'>--opt --gfn 2</span> > opt.out &" %}
 {% include command.html cmd="xtb humjil.xyz <span class='nt'>--opt --gff</span> > opt.out &" %}
-
-<span class='nt'>--gfn 2</span>
-
 </div>
 
 <div id="struc" class="tabcontent tab-1-1" style="font-size:10px">
