@@ -28,12 +28,12 @@ The protonation screening can be requested with:
   <button 
     class="tablinks tab-id-5-1"
     onclick="openTabId(event, 'command-5-1', 'tab-id-5-1')"
-    id="defaultOpen">{{ site.data.icons.code }}
+    id="open-5-1">{{ site.data.icons.code }}
     <code>command</code>
   </button>
   <button 
     class="tablinks tab-id-5-1"
-    onclick="openTabId(event, 'struc', 'tab-id-5-1')">{{ site.data.icons.codefile }}
+    onclick="openTabId(event, 'struc-5-1', 'tab-id-5-1')">{{ site.data.icons.codefile }}
     <code>struc.xyz</code>
   </button>
 </div>
@@ -72,6 +72,7 @@ H     3.572730    -0.688405    -1.154998
 {% endcapture %}
 {% include codecell.html content=struc_xyz %}
 </div>
+{% include defaulttab.html id="open-5-1" %}
 
 This uses GFN2-xTB by default. All protomers found by CREST are stored in `protonated.xyz`.
 
@@ -85,7 +86,7 @@ Similar to the protonation, the deprotonation screenig for Ala-Gly can be invoke
 
 <!-- Tab links -->
 <div class="tab card">
-  <button class="tablinks tab-id-5-2" onclick="openTabId(event, 'command-5-2', 'tab-id-5-2')" id="defaultOpen">{{ site.data.icons.code }} <code>command</code></button>
+  <button class="tablinks tab-id-5-2" onclick="openTabId(event, 'command-5-2', 'tab-id-5-2')" id="open-5-2">{{ site.data.icons.code }} <code>command</code></button>
   <button class="tablinks tab-id-5-2" onclick="openTabId(event, 'struc-5-2', 'tab-id-5-2')">{{ site.data.icons.codefile }}  <code>struc.xyz</code></button>
 </div>
 <!-- Tab content -->
@@ -123,6 +124,7 @@ H     3.572730    -0.688405    -1.154998
 {% endcapture %}
 {% include codecell.html content=struc_xyz %}
 </div>
+{% include defaulttab.html id="open-5-2" %}
 
 All possible structures are stored in `deprotonated.xyz`.
 
@@ -135,7 +137,7 @@ CREST can combine the protonation and deprotonation screenings to find tautomers
 
 <!-- Tab links -->
 <div class="tab card">
-  <button class="tablinks tab-id-5-3" onclick="openTabId(event, 'command-5-3', 'tab-id-5-3')" id="defaultOpen">{{ site.data.icons.code }} <code>command</code></button>
+  <button class="tablinks tab-id-5-3" onclick="openTabId(event, 'command-5-3', 'tab-id-5-3')" id="open-5-3">{{ site.data.icons.code }} <code>command</code></button>
   <button class="tablinks tab-id-5-3" onclick="openTabId(event, 'struc-5-3', 'tab-id-5-3')">{{ site.data.icons.codefile }}  <code>struc.xyz</code></button>
 </div>
 <!-- Tab content -->
@@ -173,15 +175,16 @@ H     3.572730    -0.688405    -1.154998
 {% endcapture %}
 {% include codecell.html content=struc_xyz %}
 </div>
+{% include defaulttab.html id="open-5-3" %}
 
 Check out all the tautomers.
 Can you find the zwitterion?
 If not, why?
 
 <div class="tab card">
-  <button class="tablinks tab-id-5-4 active" onclick="openTabId(event, 'question-5-1', '1')">{{ site.data.icons.question }} <strong>Question</strong></button>
-  <button class="tablinks tab-id-5-4" onclick="openTabId(event, 'hint-5-1', '1')">{{ site.data.icons.hint }} <strong>Hint</strong></button>
-  <button class="tablinks tab-id-5-4" onclick="openTabId(event, 'solution-5-1', '1')">{{ site.data.icons.solution }} <strong>Solution</strong></button>
+  <button class="tablinks tab-id-5-4 active" onclick="openTabId(event, 'question-5-1', 'tab-id-5-4')" id="open-5-4">{{ site.data.icons.question }} <strong>Question</strong></button>
+  <button class="tablinks tab-id-5-4" onclick="openTabId(event, 'hint-5-1', 'tab-id-5-4')">{{ site.data.icons.hint }} <strong>Hint</strong></button>
+  <button class="tablinks tab-id-5-4" onclick="openTabId(event, 'solution-5-1', 'tab-id-5-4')">{{ site.data.icons.solution }} <strong>Solution</strong></button>
 </div>
 
 <!-- Tab content -->
@@ -196,3 +199,4 @@ If not, why?
 <div id="solution-5-1" class="tabcontent tab-id-5-4" style="text-align:justify">
   <p><strong>Solution:</strong> Add implicit solvation to stabilize charged species via <code>--alpb water</code></p>
 </div>
+{% include defaulttab.html id="open-5-4" %}
