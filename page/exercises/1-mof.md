@@ -530,6 +530,7 @@ H         -5.87559        2.70758       -0.14876
 {% endcapture %}
 {% include codecell.html content=struc_file style="font-size:10px" %}
 </div>
+{% include defaulttab.html id="open-3" %}
 
 The outcome shows a structure, were not the amine functional group coordinates to the metal center, but rather a hydrogen bond forms between the bromine and OH group.
 However, this is not the the desired complex required for the reaction. For such cases, the program can be told to search for a amine coordination by defining a preferred interaction site by providing a input file that specifies the atom numbers relevant for complexation:
@@ -552,3 +553,4 @@ $end
 {% endcapture %}
 {% include codecell.html content=struc_file style="font-size:10px" %}
 </div>
+{% include defaulttab.html id="open-4" %}
