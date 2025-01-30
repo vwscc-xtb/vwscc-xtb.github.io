@@ -126,4 +126,6 @@ plugins:
 
 just_the_docs:
   enable_copy_code_button: true
+  
+remote_theme: "just-the-docs/just-the-docs"
 
