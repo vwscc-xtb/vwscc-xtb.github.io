@@ -1,6 +1,7 @@
 title: VWSCC-xTB
 description: xTB workshop for the Virtual Winter School on Computational Chemistry 2025
-theme: just-the-docs
+remote_theme: "just-the-docs/just-the-docs"
+
 
 baseurl: ""
 url: https://vwscc-xtb.github.io
@@ -127,5 +128,4 @@ plugins:
 just_the_docs:
   enable_copy_code_button: true
   
-remote_theme: "just-the-docs/just-the-docs"
 
