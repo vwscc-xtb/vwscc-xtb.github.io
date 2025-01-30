@@ -22,14 +22,14 @@ Perform a reaction path search at the *GFN2-xTB* (gas) level of theory for the g
 
  <!-- Tab links -->
 <div class="tab card">
-  <button class="tablinks tab-id-1" onclick="openTabId(event, 'tab-1-1', 'tab-id-1')" id="open-1">{{ site.data.icons.code }} <code>command</code></button>
-  <button class="tablinks tab-id-1" onclick="openTabId(event, 'tab-1-2', 'tab-id-1')">{{ site.data.icons.codefile }} <code>path.inp</code></button>
+  <button class="tablinks tab-id-3-1" onclick="openTabId(event, 'tab-1-1', 'tab-id-3-1')" id="open-1">{{ site.data.icons.code }} <code>command</code></button>
+  <button class="tablinks tab-id-3-1" onclick="openTabId(event, 'tab-1-2', 'tab-id-3-1')">{{ site.data.icons.codefile }} <code>path.inp</code></button>
 </div>
 <!-- Tab content -->
-<div id="tab-1-1" class="tabcontent tab-id-1" style="text-align:justify">
+<div id="tab-1-1" class="tabcontent tab-id-3-1" style="text-align:justify">
 {% include command.html cmd="xtb start.xyz <span class='nt'>--path</span> end.xyz <span class='nt'>--input</span> path.inp > path.out &" %}
 </div>
-<div id="tab-1-2" class="tabcontent tab-id-1" style="text-align:justify">
+<div id="tab-1-2" class="tabcontent tab-id-3-1" style="text-align:justify">
 {% capture struc_file %}
 $path
 nrun=1 # number of runs
@@ -66,14 +66,14 @@ Start the calculation with the following command or use the `run.sh` script to c
 
 <!-- Tab links -->
 <div class="tab card">
-  <button class="tablinks tab-id-1" onclick="openTabId(event, 'tab-1-1', 'tab-id-1')" id="open-1">{{ site.data.icons.code }} <code>command</code></button>
-  <button class="tablinks tab-id-1" onclick="openTabId(event, 'tab-1-2', 'tab-id-1')">{{ site.data.icons.codefile }} <code>path.inp</code></button>
+  <button class="tablinks tab-id-3-1" onclick="openTabId(event, 'command-3-1', 'tab-id-3-1')" id="open-1">{{ site.data.icons.code }} <code>command</code></button>
+  <button class="tablinks tab-id-3-1" onclick="openTabId(event, 'struc-3-1', 'tab-id-3-1')">{{ site.data.icons.codefile }} <code>path.inp</code></button>
 </div>
 <!-- Tab content -->
-<div id="tab-1-1" class="tabcontent tab-id-1" style="text-align:justify">
+<div id="command-3-1" class="tabcontent tab-id-3-1" style="text-align:justify">
 {% include command.html cmd="gsm.orca > gsm.out 2> end &" %}
 </div>
-<div id="tab-1-2" class="tabcontent tab-id-1" style="text-align:justify">
+<div id="struc-3-1" class="tabcontent tab-id-3-1" style="text-align:justify">
 {% capture run_file %}
 #!/bin/bash
 
