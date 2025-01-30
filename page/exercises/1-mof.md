@@ -339,15 +339,11 @@ O          1.18955        0.22040        0.00000
 
 {% include defaulttab.html id="open-1" %}
 
-
-Options: \\
-**--nfinal \<INT\>** - to produce more structures.
-
 The energetically best structure can be found in the `best.xyz` file.
 For the docking, most flags possible for a geometry optimization can also be used. For example, implicit solvation can also be employed by providing the *--alpb* flag.
 
 {% include note.html content=
-'To save computational time for this workshop, the number of final structures optimized with *GFN2-xTB* was limited to 2. Per default, 15 structures are produced.'%}
+'To save computational time for this workshop, the number of final structures optimized with *GFN2-xTB* was limited to 2 with the **--nfinal** flag. Per default, 15 structures are produced.'%}
 
 
 ## Molecular Dynamics
