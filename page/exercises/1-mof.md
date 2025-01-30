@@ -24,11 +24,12 @@ Compare the 4 geometries by visually overlaying within e.g. [Chimera](https://ww
 </div>
 <!-- Tab content -->
 <div id="command" class="tabcontent tab-1-1" style="text-align:justify">
-{% include command.html cmd="xtb humjil.xyz --opt --gfn 2 --alpb h2o > opt.out &" %}
-{% include command.html cmd="xtb humjil.xyz --opt --gff --alpb h2o > opt.out &" %}
-{% include command.html cmd="xtb humjil.xyz --opt --gfn 2 > opt.out &" %}
-{% include command.html cmd="xtb humjil.xyz --opt --gff > opt.out &" %}
+{% include command.html cmd="xtb humjil.xyz <span class='nt'>--opt --gfn 2 --alpb thf</span> > opt.out &" %}
+{% include command.html cmd="xtb humjil.xyz <span class='nt'>--opt --gff --alpb thf</span> > opt.out &" %}
+{% include command.html cmd="xtb humjil.xyz <span class='nt'>--opt --gfn 2</span> > opt.out &" %}
+{% include command.html cmd="xtb humjil.xyz <span class='nt'>--opt --gff</span> > opt.out &" %}
 
+<span class='nt'>--gfn 2</span>
 
 </div>
 
