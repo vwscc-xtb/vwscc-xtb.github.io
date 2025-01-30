@@ -24,8 +24,8 @@ Even though xtb is cross-platform, for simplicity and stability reasons, we assu
 
 
 ## Straighforward Installation
-The most straightforward way of installing xtb is to download [precompiled binaries](https://github.com/grimme-lab/xtb/releases). One can also download vlled-edge version of the program subject to less testing.
-After downloading the appropriate version, please extract, make it executable, and add to your `PATH` variable:
+The most straightforward way to install xtb is by downloading the [precompiled binaries](https://github.com/grimme-lab/xtb/releases). You can also get bleeding-edge version of the program.
+After downloading the appropriate version, extract it, make it executable, and add it to your `PATH` variable:
 
 ```bash
 tar -xvf xtb*.tar.xz
@@ -33,23 +33,57 @@ chmod +x ./xtb-dist/bin/xtb
 export PATH=$PWD/xtb-dist/bin:$PATH
 ```
 
-Please also check if the executable is correctly linked via:
+To verify that the executable is correctly linked, use:
 
 ```bash
 which xtb
 ```
-and the corresponding version
-
+And check the installed version with:
 ```bash
 xtb --version
 ```
 
+{% include tip.html content='You can add the full path to your Bash shell configuration file (~/.bashrc) to automatically load **xtb** in new sessions.'%}
+
+## Conda Installation
+
+It is possible to install xtb from the conda-forge feedstock using the [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html) package manager:
+
+```bash
+conda install xtb -c conda-forge xtb
+```
+This ensures an easy and managed installation with automatic dependency handling.
+
+
+{% include tip.html content='In case of slow Conda dependency resolution, we recommend using the lightweight alternative -- [Mamba](https://github.com/mamba-org/mamba) package manager.'%}
+
 
 
 ## Compilation 
-The more advanced way is to compile xtb from the codebase. 
+A more advanced approach is to compile xtb from the source code. Native compilation has certain advantages over precompiled binaries, such as producing a system-tailored binary and allowing modifications to the software in place.
+
+Here, we follow a minimalistic build using our default toolchain: the `meson` build system and the `ifort`/`icc` compilers.
+
+First step is to clone the official GitHub repository via:
+```bash
+git clone https://github.com/grimme-lab/xtb.git
+```
+
+Then, define the Fortran and C compilers, which can be installed via Intel's [Developer Toolkit](https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html#base-kit):
+```bash
+export FC=ifort CC=icc
+```
+
+Finally, you can build the project with [Meson](https://mesonbuild.com/):
+```bash
+meson setup build --buildtype=release
+meson compile -C build
+```
 
 
 ## Utility Tools
-In order to be able to v
+During the course of the workshop, you will also need to visualize molecular structures.
+The required graphical user interfaces (GUIs) include [Avogadro](https://avogadro.cc/), [Molden](https://www.theochem.ru.nl/molden/), and others.
+Additionally, you should have a text editor (e.g., vim, nano, VSCode) to edit input files and adjust calculation parameters as needed.
+
 
