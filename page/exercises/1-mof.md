@@ -402,7 +402,7 @@ Have a look at the simulation by openning the `xtb.trj` file with, e. g., [Molde
 <div class="tab card">
   <button class="tablinks tab-id-3" onclick="openTabId(event, 'tab-3-1', 'tab-id-3')" id="open-3">{{ site.data.icons.code }} <code>command</code></button>
   <button class="tablinks tab-id-3" onclick="openTabId(event, 'tab-3-2', 'tab-id-3')">{{ site.data.icons.codefile }} <code>cat.xyz</code></button>
-  <button class="tablinks tab-id-3" onclick="openTabId(event, 'tab-3-2', 'tab-id-3')">{{ site.data.icons.codefile }} <code>amine.xyz</code></button>
+  <button class="tablinks tab-id-3" onclick="openTabId(event, 'tab-3-3', 'tab-id-3')">{{ site.data.icons.codefile }} <code>amine.xyz</code></button>
 </div>
 <!-- Tab content -->
 <div id="tab-3-1" class="tabcontent tab-id-3" style="text-align:justify">
