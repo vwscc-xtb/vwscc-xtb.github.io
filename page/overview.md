@@ -6,7 +6,7 @@ has_children: false
 permalink: /page/overview
 ---
 
-# Overview
+## Literature
 
 This practice session is designed for users to explore the [xtb](https://github.com/grimme-lab/xtb)  software package as the central codebase for GFNn-xTB methods and their applicability to various types of calculations.
 For deeper insights into the mathematical construction and technical details of the here used GFNn-xTB methods please read the original literature (excerpt):
@@ -51,3 +51,13 @@ For deeper insights into the mathematical construction and technical details of 
 
 Please also visit the [xtb documentation](https://xtb-docs.readthedocs.io/en/latest/) and the xtb command line help and manual entries if you need more information or examples during this workshop.
 There would be also optional task that would need installation of *Conformer–Rotamer Ensemble Sampling Tool* ([CREST](https://crest-lab.github.io/crest-docs/)).
+
+
+## Subgroups
+
+We offer three groups during the workshop:
+1. Beginners, who have almost never used any quantum chemistry
+(QC) program.
+2. Intermediates, who know how to use some QC program but not
+xtb.
+3. Advanced, who have already used xtb.
