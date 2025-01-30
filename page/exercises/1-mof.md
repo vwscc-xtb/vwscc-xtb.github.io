@@ -9,16 +9,13 @@ permalink: page/exercises/MOF
 ---
 # Metal-Organic Materials
 
-
-Metal organic frameworks (MOFs, 3D) and cages (MOCs, 0D) are important substance classes for the use in organic electronics, carbon capture, solvent sieving, gas filtering, gas storage and many more.
-The GFN parametrization can describe all elements up to at least Z=86 and is, therefore, an efficient alternative to standard electronic structure methods for investigating MOFs and MOCs.
+To demonstrate possible applications of **xtb**, we want to start with metal-organic frameworks (MOFs, 3D) and cages (MOCs, 0D). Due to their diverse elemental composition, consisting of organic linkers and complexed metal atoms, and their usually large size of hundreds of atoms, they can be challenging to treat computationally. The broad parameterization of all elements up to at least Z=86 combined with the computational costs that are much cheaper than usual DFT or WFT methods make the GFN method a valuable tool for treating such systems.
 In the following, we present an excerpt from a workflow-like compilation of experiments with the HUMJIL MOC (CCDC nomenclature).
 
 ## Geometry Optimization
-
 Perform a geometry optimization for `humjil.xyz` in the gas phase and with THF as a solvent (via implicit solvation model - Analytically Linearized Poisson Boltzmann Model) at the *GFN2-xTB*
-and *GFN-FF* levels of theory. 
-Compare the 4 geometries visually overlaying within e.g. [Chimera](https://www.cgl.ucsf.edu/chimera/) or with a (commandline) RMSD tool.
+and *GFN-FF* levels of theory.
+Compare the 4 geometries by visually overlaying within e.g. [Chimera](https://www.cgl.ucsf.edu/chimera/) or with a (commandline) RMSD tool.
 
 
 <div class="tab card">
@@ -346,10 +343,10 @@ Options: \\
 **--nfinal \<INT\>** - to produce more structures.
 
 The energetically best structure can be found in the `best.xyz` file.
-For the docking, similar flags can be used as for a geometry optimization. For example, implicit solvation can also be employed by providing the *--alpb* flag.
+For the docking, most flags possible for a geometry optimization can also be used. For example, implicit solvation can also be employed by providing the *--alpb* flag.
 
-{% include warning.html content=
-'Be aware, the order matters. In the current arrangement of **.xyz** files the CO<sub>2</sub> is docked to the MOC. If you switch the order the computation time will be larger as the MOC is docked to  CO<sub>2</sub>. To save computiational time for this workshop, the number of final structures optimized with *GFN2-xTB* was limited to 2. Per default, 15 structures are produced.'%}
+{% include note.html content=
+'To save computational time for this workshop, the number of final structures optimized with *GFN2-xTB* was limited to 2. Per default, 15 structures are produced.'%}
 
 
 ## Molecular Dynamics
@@ -393,10 +390,10 @@ Before you list any content of this directory when the calculation has finished,
 ```bash
 rm scoord*
 ```
-Have a look at the simulation by openning the `xtb.trj` file with, e. g., [Molden](https://www.theochem.ru.nl/molden/) 
+Have a look at the simulation by opening the `xtb.trj` file with, e. g., [Molden](https://www.theochem.ru.nl/molden/) 
 
 ## Optional
-**xtb** can also be helpful to generate structures relevant for reaction mechanism exploration. For example, the Buchwald Hartwig amination of bromobenzene and (S)-3-amino-2-methylpropan-1-ol with a Pd(BINAP) catalyst involves complexation of the intermediate catalyst by the amine. Try to generate this complex with the following input
+**xtb** can also be helpful in generating structures relevant to reaction mechanism exploration. For example, the Buchwald Hartwig amination of bromobenzene and (S)-3-amino-2-methylpropan-1-ol with a Pd(BINAP) catalyst involves the complexation of the intermediate catalyst by the amine. Try to generate this complex with the following input
 
  <!-- Tab links -->
 <div class="tab card">
@@ -532,8 +529,8 @@ H         -5.87559        2.70758       -0.14876
 </div>
 {% include defaulttab.html id="open-3" %}
 
-The outcome shows a structure, were not the amine functional group coordinates to the metal center, but rather a hydrogen bond forms between the bromine and OH group.
-However, this is not the the desired complex required for the reaction. For such cases, the program can be told to search for a amine coordination by defining a preferred interaction site by providing a input file that specifies the atom numbers relevant for complexation:
+The outcome shows a structure in which the amine functional group does not coordinates to the metal center, but rather a hydrogen bond is formed between the bromine and the OH group.
+However, this is not the desired complex required for the reaction. For such cases, the program can be told to search for an amine coordination by defining a preferred interaction site by providing an input file that specifies the atom numbers relevant for complexation:
 
  <!-- Tab links -->
 <div class="tab card">
