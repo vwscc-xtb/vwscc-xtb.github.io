@@ -26,25 +26,25 @@ The protonation screening can be requested with:
 <!-- Tab links -->
 <div class="tab card">
   <button 
-    class="tablinks tab-id-1"
-    onclick="openTabId(event, 'command', 'tab-id-1')"
+    class="tablinks tab-id-5-1"
+    onclick="openTabId(event, 'command', 'tab-id-5-1')"
     id="defaultOpen">{{ site.data.icons.code }}
     <code>command</code>
   </button>
   <button 
-    class="tablinks tab-id-1"
-    onclick="openTabId(event, 'struc', 'tab-id-1')">{{ site.data.icons.codefile }}
+    class="tablinks tab-id-5-1"
+    onclick="openTabId(event, 'struc', 'tab-id-5-1')">{{ site.data.icons.codefile }}
     <code>struc.xyz</code>
   </button>
 </div>
 <!-- Tab content -->
-<div id="command" class="tabcontent tab-id-1" style="text-align:justify">
+<div id="command" class="tabcontent tab-id-5-1" style="text-align:justify">
 {% include command.html cmd="crest struc.xyz --protonate &" %}
 <span markdown="span">
 </span>
 </div>
 
-<div id="struc" class="tabcontent tab-id-1" style="font-size:10px">
+<div id="struc" class="tabcontent tab-id-5-1" style="font-size:10px">
 {% capture struc_xyz %}
 20
 
@@ -85,17 +85,17 @@ Similar to the protonation, the deprotonation screenig for Ala-Gly can be invoke
 
 <!-- Tab links -->
 <div class="tab card">
-  <button class="tablinks tab-id-2" onclick="openTabId(event, 'command', 'tab-id-2')" id="defaultOpen">{{ site.data.icons.code }} <code>command</code></button>
-  <button class="tablinks tab-id-2" onclick="openTabId(event, 'struc', 'tab-id-2')">{{ site.data.icons.codefile }}  <code>struc.xyz</code></button>
+  <button class="tablinks tab-id-5-2" onclick="openTabId(event, 'command', 'tab-id-5-2')" id="defaultOpen">{{ site.data.icons.code }} <code>command</code></button>
+  <button class="tablinks tab-id-5-2" onclick="openTabId(event, 'struc', 'tab-id-5-2')">{{ site.data.icons.codefile }}  <code>struc.xyz</code></button>
 </div>
 <!-- Tab content -->
-<div id="command" class="tabcontent tab-id-2" style="text-align:justify">
+<div id="command" class="tabcontent tab-id-5-2" style="text-align:justify">
 {% include command.html cmd="crest struc.xyz --deprotonate &" %}
 <span markdown="span">
 </span>
 </div>
 
-<div id="struc" class="tabcontent tab-id-2" style="font-size:10px">
+<div id="struc" class="tabcontent tab-id-5-2" style="font-size:10px">
 {% capture struc_xyz %}
 20
 
@@ -135,17 +135,17 @@ CREST can combine the protonation and deprotonation screenings to find tautomers
 
 <!-- Tab links -->
 <div class="tab card">
-  <button class="tablinks tab-id-3" onclick="openTabId(event, 'command', 'tab-id-3')" id="defaultOpen">{{ site.data.icons.code }} <code>command</code></button>
-  <button class="tablinks tab-id-3" onclick="openTabId(event, 'struc', 'tab-id-3')">{{ site.data.icons.codefile }}  <code>struc.xyz</code></button>
+  <button class="tablinks tab-id-5-3" onclick="openTabId(event, 'command', 'tab-id-5-3')" id="defaultOpen">{{ site.data.icons.code }} <code>command</code></button>
+  <button class="tablinks tab-id-5-3" onclick="openTabId(event, 'struc', 'tab-id-5-3')">{{ site.data.icons.codefile }}  <code>struc.xyz</code></button>
 </div>
 <!-- Tab content -->
-<div id="command" class="tabcontent tab-id-3" style="text-align:justify">
+<div id="command" class="tabcontent tab-id-5-3" style="text-align:justify">
 {% include command.html cmd="crest struc.xyz --tautomerize &" %}
 <span markdown="span">
 </span>
 </div>
 
-<div id="struc" class="tabcontent tab-id-3" style="font-size:10px">
+<div id="struc" class="tabcontent tab-id-5-3" style="font-size:10px">
 {% capture struc_xyz %}
 20
 
@@ -179,20 +179,20 @@ Can you find the zwitterion?
 If not, why?
 
 <div class="tab card">
-  <button class="tablinks tab-id-4 active" onclick="openTabId(event, 'question-1', '1')">{{ site.data.icons.question }} <strong>Question</strong></button>
-  <button class="tablinks tab-id-4" onclick="openTabId(event, 'hint-1', '1')">{{ site.data.icons.hint }} <strong>Hint</strong></button>
-  <button class="tablinks tab-id-4" onclick="openTabId(event, 'solution-1', '1')">{{ site.data.icons.solution }} <strong>Solution</strong></button>
+  <button class="tablinks tab-id-5-4 active" onclick="openTabId(event, 'question-1', '1')">{{ site.data.icons.question }} <strong>Question</strong></button>
+  <button class="tablinks tab-id-5-4" onclick="openTabId(event, 'hint-1', '1')">{{ site.data.icons.hint }} <strong>Hint</strong></button>
+  <button class="tablinks tab-id-5-4" onclick="openTabId(event, 'solution-1', '1')">{{ site.data.icons.solution }} <strong>Solution</strong></button>
 </div>
 
 <!-- Tab content -->
-<div id="question-1" class="tabcontent tab-id-4" style="text-align:justify">
+<div id="question-1" class="tabcontent tab-id-5-4" style="text-align:justify">
   <p><strong>Q:</strong> How can you find the zwitter ion?</p>
 </div>
 
-<div id="hint-1" class="tabcontent tab-id-4" style="text-align:justify">
+<div id="hint-1" class="tabcontent tab-id-5-4" style="text-align:justify">
   <p><strong>Hint:</strong> In which environment do you usually find this type of compound?</p>
 </div>
 
-<div id="solution-1" class="tabcontent tab-id-4" style="text-align:justify">
+<div id="solution-1" class="tabcontent tab-id-5-4" style="text-align:justify">
   <p><strong>Solution:</strong> Add implicit solvation to stabilize charged species via <code>--alpb water</code></p>
 </div>
