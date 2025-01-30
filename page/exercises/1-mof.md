@@ -395,14 +395,38 @@ Have a look at the simulation by opening the `xtb.trj` file with, e. g., [Molden
  <!-- Tab links -->
 <div class="tab card">
   <button class="tablinks tab-id-3" onclick="openTabId(event, 'tab-3-1', 'tab-id-3')" id="open-3">{{ site.data.icons.code }} <code>command</code></button>
-  <button class="tablinks tab-id-3" onclick="openTabId(event, 'tab-3-2', 'tab-id-3')">{{ site.data.icons.codefile }} <code>cat.xyz</code></button>
-  <button class="tablinks tab-id-3" onclick="openTabId(event, 'tab-3-3', 'tab-id-3')">{{ site.data.icons.codefile }} <code>amine.xyz</code></button>
+  <button class="tablinks tab-id-3" onclick="openTabId(event, 'tab-3-2', 'tab-id-3')">{{ site.data.icons.codefile }} <code>amine.xyz</code></button>
+  <button class="tablinks tab-id-3" onclick="openTabId(event, 'tab-3-3', 'tab-id-3')">{{ site.data.icons.codefile }} <code>cat.xyz</code></button>
 </div>
 <!-- Tab content -->
 <div id="tab-3-1" class="tabcontent tab-id-3" style="text-align:justify">
-{% include command.html cmd="xtb dock cat.xyz amine.xyz <span class='nt'>--alpb dmso</span> > aiss.out &" %}
+{% include command.html cmd="xtb dock amine.xyz cat.xyz <span class='nt'>--alpb dmso</span> > aiss.out &" %}
 </div>
 <div id="tab-3-2" class="tabcontent tab-id-3" style="text-align:justify">
+{% capture struc_file %}
+17
+
+C         -3.83142        2.84076       -0.12858
+C         -2.71271        3.80734        0.30971
+H         -3.71462        1.86884        0.40191
+H         -3.75622        2.64976       -1.22212
+N         -5.15092        3.38956        0.17246
+C         -1.33694        3.16769        0.04220
+H         -1.25577        2.18168        0.55506
+O         -0.29754        4.00686        0.46991
+H         -1.20946        2.97517       -1.04499
+C         -2.83420        5.15491       -0.42082
+H         -2.80779        3.98502        1.40408
+H         -3.81369        5.63034       -0.20316
+H         -2.74149        5.01454       -1.51927
+H         -2.04024        5.85352       -0.08200
+H         -0.26205        3.93413        1.45941
+H         -5.25016        3.49470        1.20852
+H         -5.87559        2.70758       -0.14876
+{% endcapture %}
+{% include codecell.html content=struc_file style="font-size:10px" %}
+</div>
+<div id="tab-3-3" class="tabcontent tab-id-3" style="text-align:justify">
 {% capture struc_file %}
 91
 
@@ -500,30 +524,6 @@ H         7.88469613172747   -2.84885038665529    4.44540467384734
 {% endcapture %}
 {% include codecell.html content=struc_file style="font-size:10px" %}
 </div>
-<div id="tab-3-3" class="tabcontent tab-id-3" style="text-align:justify">
-{% capture struc_file %}
-17
-
-C         -3.83142        2.84076       -0.12858
-C         -2.71271        3.80734        0.30971
-H         -3.71462        1.86884        0.40191
-H         -3.75622        2.64976       -1.22212
-N         -5.15092        3.38956        0.17246
-C         -1.33694        3.16769        0.04220
-H         -1.25577        2.18168        0.55506
-O         -0.29754        4.00686        0.46991
-H         -1.20946        2.97517       -1.04499
-C         -2.83420        5.15491       -0.42082
-H         -2.80779        3.98502        1.40408
-H         -3.81369        5.63034       -0.20316
-H         -2.74149        5.01454       -1.51927
-H         -2.04024        5.85352       -0.08200
-H         -0.26205        3.93413        1.45941
-H         -5.25016        3.49470        1.20852
-H         -5.87559        2.70758       -0.14876
-{% endcapture %}
-{% include codecell.html content=struc_file style="font-size:10px" %}
-</div>
 {% include defaulttab.html id="open-3" %}
 
 The outcome shows a structure in which the amine functional group does not coordinates to the metal center, but rather a hydrogen bond is formed between the bromine and the OH group.
@@ -536,7 +536,7 @@ However, this is not the desired complex required for the reaction. For such cas
 </div>
 <!-- Tab content -->
 <div id="tab-4-1" class="tabcontent tab-id-4" style="text-align:justify">
-{% include command.html cmd="xtb dock cat.xyz amine.xyz <span class='nt'>--alpb dmso</span> <span class='nt'>-I xtb.inp</span> > aiss.out &" %}
+{% include command.html cmd="xtb dock amine.xyz cat.xyz <span class='nt'>--alpb dmso</span> <span class='nt'>-I xtb.inp</span> > aiss.out &" %}
 </div>
 <div id="tab-4-2" class="tabcontent tab-id-4" style="text-align:justify">
 {% capture struc_file %}
