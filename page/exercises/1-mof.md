@@ -405,10 +405,10 @@ Have a look at the simulation by openning the `xtb.trj` file with, e. g., [Molde
   <button class="tablinks tab-id-3" onclick="openTabId(event, 'tab-3-2', 'tab-id-3')">{{ site.data.icons.codefile }} <code>amine.xyz</code></button>
 </div>
 <!-- Tab content -->
-<div id="command" class="tabcontent tab-id-3" style="text-align:justify">
+<div id="tab-3-1" class="tabcontent tab-id-3" style="text-align:justify">
 {% include command.html cmd="xtb dock cat.xyz amine.xyz <span class='nt'>--alpb dmso</span> > aiss.out &" %}
 </div>
-<div id="cat.xyz" class="tabcontent tab-id-3" style="text-align:justify">
+<div id="tab-3-2" class="tabcontent tab-id-3" style="text-align:justify">
 {% capture struc_file %}
 91
 
@@ -506,7 +506,7 @@ H         7.88469613172747   -2.84885038665529    4.44540467384734
 {% endcapture %}
 {% include codecell.html content=struc_file style="font-size:10px" %}
 </div>
-<div id="amine.xyz" class="tabcontent tab-id-3" style="text-align:justify">
+<div id="tab-3-3" class="tabcontent tab-id-3" style="text-align:justify">
 {% capture struc_file %}
 17
 
