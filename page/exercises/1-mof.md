@@ -396,7 +396,7 @@ rm scoord*
 Have a look at the simulation by openning the `xtb.trj` file with, e. g., [Molden](https://www.theochem.ru.nl/molden/) 
 
 ## Optional
-**xtb** can also be helpful to generate structures relevant for reaction mechanism exploration. For example, the Buchwald Hartwig amination of bromobenzene and (S)-3-amino-2-methylpropan-1-ol with a Pd(BINAP) catalyst involves complexation of the intermediate catalyst by the amine. To quickly generate this reasonable complex, the docking functionality can be used with the following command and the respective coordinates
+**xtb** can also be helpful to generate structures relevant for reaction mechanism exploration. For example, the Buchwald Hartwig amination of bromobenzene and (S)-3-amino-2-methylpropan-1-ol with a Pd(BINAP) catalyst involves complexation of the intermediate catalyst by the amine. Try to generate this complex with the following input
 
  <!-- Tab links -->
 <div class="tab card">
@@ -405,10 +405,10 @@ Have a look at the simulation by openning the `xtb.trj` file with, e. g., [Molde
   <button class="tablinks tab-id-2" onclick="openTabId(event, 'tab-2-2', 'tab-id-2')">{{ site.data.icons.codefile }} <code>amine.xyz</code></button>
 </div>
 <!-- Tab content -->
-<div id="tab-2-1" class="tabcontent tab-id-2" style="text-align:justify">
+<div id="command" class="tabcontent tab-id-2" style="text-align:justify">
 {% include command.html cmd="xtb dock cat.xyz amine.xyz <span class='nt'>--alpb dmso</span> > aiss.out &" %}
 </div>
-<div id="tab-2-2" class="tabcontent tab-id-2" style="text-align:justify">
+<div id="cat.xyz" class="tabcontent tab-id-2" style="text-align:justify">
 {% capture struc_file %}
 91
 
@@ -506,8 +506,7 @@ H         7.88469613172747   -2.84885038665529    4.44540467384734
 {% endcapture %}
 {% include codecell.html content=struc_file style="font-size:10px" %}
 </div>
-</div>
-<div id="tab-2-2" class="tabcontent tab-id-2" style="text-align:justify">
+<div id="amine.xyz" class="tabcontent tab-id-2" style="text-align:justify">
 {% capture struc_file %}
 17
 
@@ -531,8 +530,6 @@ H         -5.87559        2.70758       -0.14876
 {% endcapture %}
 {% include codecell.html content=struc_file style="font-size:10px" %}
 </div>
-
-{% include defaulttab.html id="open-2" %}
 
 The outcome shows a structure, were not the amine functional group coordinates to the metal center, but rather a hydrogen bond forms between the bromine and OH group.
 However, this is not the the desired complex required for the reaction. For such cases, the program can be told to search for a amine coordination by defining a preferred interaction site by providing a input file that specifies the atom numbers relevant for complexation:
