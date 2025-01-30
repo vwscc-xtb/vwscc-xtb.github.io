@@ -400,15 +400,15 @@ Have a look at the simulation by openning the `xtb.trj` file with, e. g., [Molde
 
  <!-- Tab links -->
 <div class="tab card">
-  <button class="tablinks tab-id-2" onclick="openTabId(event, 'tab-2-1', 'tab-id-2')" id="open-2">{{ site.data.icons.code }} <code>command</code></button>
-  <button class="tablinks tab-id-2" onclick="openTabId(event, 'tab-2-2', 'tab-id-2')">{{ site.data.icons.codefile }} <code>cat.xyz</code></button>
-  <button class="tablinks tab-id-2" onclick="openTabId(event, 'tab-2-2', 'tab-id-2')">{{ site.data.icons.codefile }} <code>amine.xyz</code></button>
+  <button class="tablinks tab-id-3" onclick="openTabId(event, 'tab-3-1', 'tab-id-3')" id="open-3">{{ site.data.icons.code }} <code>command</code></button>
+  <button class="tablinks tab-id-3" onclick="openTabId(event, 'tab-3-2', 'tab-id-3')">{{ site.data.icons.codefile }} <code>cat.xyz</code></button>
+  <button class="tablinks tab-id-3" onclick="openTabId(event, 'tab-3-2', 'tab-id-3')">{{ site.data.icons.codefile }} <code>amine.xyz</code></button>
 </div>
 <!-- Tab content -->
-<div id="command" class="tabcontent tab-id-2" style="text-align:justify">
+<div id="command" class="tabcontent tab-id-3" style="text-align:justify">
 {% include command.html cmd="xtb dock cat.xyz amine.xyz <span class='nt'>--alpb dmso</span> > aiss.out &" %}
 </div>
-<div id="cat.xyz" class="tabcontent tab-id-2" style="text-align:justify">
+<div id="cat.xyz" class="tabcontent tab-id-3" style="text-align:justify">
 {% capture struc_file %}
 91
 
@@ -506,7 +506,7 @@ H         7.88469613172747   -2.84885038665529    4.44540467384734
 {% endcapture %}
 {% include codecell.html content=struc_file style="font-size:10px" %}
 </div>
-<div id="amine.xyz" class="tabcontent tab-id-2" style="text-align:justify">
+<div id="amine.xyz" class="tabcontent tab-id-3" style="text-align:justify">
 {% capture struc_file %}
 17
 
@@ -536,14 +536,14 @@ However, this is not the the desired complex required for the reaction. For such
 
  <!-- Tab links -->
 <div class="tab card">
-  <button class="tablinks tab-id-1" onclick="openTabId(event, 'tab-1-1', 'tab-id-1')" id="open-1">{{ site.data.icons.code }} <code>command</code></button>
-  <button class="tablinks tab-id-1" onclick="openTabId(event, 'tab-1-2', 'tab-id-1')">{{ site.data.icons.codefile }} <code>xtb.inp</code></button>
+  <button class="tablinks tab-id-4" onclick="openTabId(event, 'tab-4-1', 'tab-id-4')" id="open-4">{{ site.data.icons.code }} <code>command</code></button>
+  <button class="tablinks tab-id-4" onclick="openTabId(event, 'tab-4-2', 'tab-id-4')">{{ site.data.icons.codefile }} <code>xtb.inp</code></button>
 </div>
 <!-- Tab content -->
-<div id="tab-1-1" class="tabcontent tab-id-1" style="text-align:justify">
+<div id="tab-4-1" class="tabcontent tab-id-4" style="text-align:justify">
 {% include command.html cmd="xtb dock cat.xyz amine.xyz <span class='nt'>--alpb dmso</span> <span class='nt'>-I xtb.inp</span> > aiss.out &" %}
 </div>
-<div id="tab-1-2" class="tabcontent tab-id-1" style="text-align:justify">
+<div id="tab-4-2" class="tabcontent tab-id-4" style="text-align:justify">
 {% capture struc_file %}
 $directed
    scaling factor= 1.0
