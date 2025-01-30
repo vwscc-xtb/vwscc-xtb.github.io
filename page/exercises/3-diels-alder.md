@@ -20,7 +20,6 @@ Build the input structures (buta-1,3-diene and but-2-ene) yourself with a molecu
 ## Pathfinder
 Perform a reaction path search at the *GFN2-xTB* (gas) level of theory for the given reactants. You need the following input file (`path.inp`) in addition to your coordinate files:
 
-
  <!-- Tab links -->
 <div class="tab card">
   <button class="tablinks tab-id-1" onclick="openTabId(event, 'tab-1-1', 'tab-id-1')" id="open-1">{{ site.data.icons.code }} <code>command</code></button>
@@ -53,15 +52,80 @@ The resulting path should be written to `xtbpath.xyz`.
 
 ## Growing String Method
 Another option for reaction path search is the growing string method (GSM) developed by the Zimmermann group and adapted for xtb. To set it up, you'll need `inpfileq` (provided), `ograd` (provided) which you can download [here](https://github.com/grimme-lab/molecularGSM/releases/tag/rev1).
-First, render the executable as
+
+First. unpack the downloaded archive and place the `gsm.orca` program in your path.
+Next, go to your working directory and place `inpfileq` and `ograd` there.
+Then, you have to create a direcotry named `scratch` and move the `tm2orca.py` script into it.
+Concatenate the start.xyz and end.xyz file into `initial0000.xyz` and move the latter also into the scratch directory. 
+Finally, make the `ograd` and `tm2orca.py` scripts are executable with
 ```bash
 chmod u+x ograd
+chmod u+x scratch/tm2orca.py
 ```
-and a new subdirectory named scratch which includes `tm2orca.py` (provided), and `initial0000.xyz` wherein start.xyz and end.xyz are concatenated after each other. Start the calculation with:
-```bash
-gsm.orca > gsm.out 2>err &
-```
-The resulting path should be written to `stringfile.xyz0000`.
+Start the calculation with the following command or use the `run.sh` script to check if you followed all the above steps and all files are in the correct location.
+
+<!-- Tab links -->
+<div class="tab card">
+  <button class="tablinks tab-id-1" onclick="openTabId(event, 'tab-1-1', 'tab-id-1')" id="open-1">{{ site.data.icons.code }} <code>command</code></button>
+  <button class="tablinks tab-id-1" onclick="openTabId(event, 'tab-1-2', 'tab-id-1')">{{ site.data.icons.codefile }} <code>path.inp</code></button>
+</div>
+<!-- Tab content -->
+<div id="tab-1-1" class="tabcontent tab-id-1" style="text-align:justify">
+{% include command.html cmd="gsm.orca > gsm.out 2> end &" %}
+</div>
+<div id="tab-1-2" class="tabcontent tab-id-1" style="text-align:justify">
+{% capture run_file %}
+#!/bin/bash
+
+if ! command -v gsm.orca >/dev/null 2>&1; then
+    echo "The program 'gsm.orca' was not found."
+    exit 1
+fi
+
+if ! command -v xtb >/dev/null 2>&1; then
+    echo "The program 'xtb' was not found."
+    exit 1
+fi
+
+if [[ ! -f "ograd" ]]; then
+    echo "The file 'ograd' was not found."
+    exit 1
+fi
+
+if [[ ! -x "ograd" ]]; then
+    echo "The file 'ograd' is not executable."
+    exit 1
+fi
+
+if [[ ! -d "scratch" ]]; then
+    echo "The directory 'scratch' was not found."
+    exit 1
+fi
+
+if [[ ! -f "scratch/initial0000.xyz" ]]; then
+    echo "The file 'scratch/initial0000.xyz' was not found."
+    echo "You can create it with the following command:"
+    echo "cat start.xyz end.xyz > scratch/initial0000.xyz"
+    exit 1
+fi
+
+if [[ ! -f "scratch/tm2orca.py" ]]; then
+    echo "The file 'scratch/tm2orca.py' was not found."
+    exit 1
+fi
+
+if [[ ! -x "scratch/tm2orca.py" ]]; then
+    echo "The file 'scratch/tm2orca.py' is not executable."
+    exit 1
+fi
+
+gsm.orca > gsm.out 2> err &
+
+{% endcapture %}
+{% include codecell.html content=run_file style="font-size:10px" %}
+</div>
+
+The resulting path is written to `stringfile.xyz0000` and can be used to find the transition state.
 
 ### Frequencies
 
