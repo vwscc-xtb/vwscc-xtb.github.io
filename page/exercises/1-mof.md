@@ -400,7 +400,7 @@ Have a look at the simulation by opening the `xtb.trj` file with, e. g., [Molden
 </div>
 <!-- Tab content -->
 <div id="tab-3-1" class="tabcontent tab-id-3" style="text-align:justify">
-{% include command.html cmd="xtb dock amine.xyz cat.xyz <span class='nt'>--alpb dmso</span> > aiss.out &" %}
+{% include command.html cmd="xtb dock amine.xyz cat.xyz <span class='nt'>--alpb dmso --fast</span> > aiss.out &" %}
 </div>
 <div id="tab-3-2" class="tabcontent tab-id-3" style="text-align:justify">
 {% capture struc_file %}
@@ -536,7 +536,7 @@ However, this is not the desired complex required for the reaction. For such cas
 </div>
 <!-- Tab content -->
 <div id="tab-4-1" class="tabcontent tab-id-4" style="text-align:justify">
-{% include command.html cmd="xtb dock amine.xyz cat.xyz <span class='nt'>--alpb dmso</span> <span class='nt'>-I xtb.inp</span> > aiss.out &" %}
+{% include command.html cmd="xtb dock amine.xyz cat.xyz <span class='nt'>--alpb dmso --fast </span> <span class='nt'>-I xtb.inp</span> > aiss.out &" %}
 </div>
 <div id="tab-4-2" class="tabcontent tab-id-4" style="text-align:justify">
 {% capture struc_file %}
