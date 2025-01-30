@@ -67,7 +67,7 @@ Start the calculation with the following command or use the `run.sh` script to c
 <!-- Tab links -->
 <div class="tab card">
   <button class="tablinks tab-id-3-2" onclick="openTabId(event, 'command-3-2', 'tab-id-3-2')" id="open-3-2">{{ site.data.icons.code }} <code>command</code></button>
-  <button class="tablinks tab-id-3-2" onclick="openTabId(event, 'struc-3-2', 'tab-id-3-2')">{{ site.data.icons.codefile }} <code>path.inp</code></button>
+  <button class="tablinks tab-id-3-2" onclick="openTabId(event, 'struc-3-2', 'tab-id-3-2')">{{ site.data.icons.codefile }} <code>run.sh</code></button>
 </div>
 <!-- Tab content -->
 <div id="command-3-2" class="tabcontent tab-id-3-2" style="text-align:justify">
