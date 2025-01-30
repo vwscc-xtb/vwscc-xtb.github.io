@@ -8,10 +8,7 @@ has_children: false
 permalink: page/exercises/MOF
 ---
 # Metal-Organic Materials
-1. TOC
-{: .toc}
 
-\\
 
 Metal organic frameworks (MOFs, 3D) and cages (MOCs, 0D) are important substance classes for the use in organic electronics, carbon capture, solvent sieving, gas filtering, gas storage and many more.
 The GFN parametrization can describe all elements up to at least Z=86 and is, therefore, an efficient alternative to standard electronic structure methods for investigating MOFs and MOCs.
