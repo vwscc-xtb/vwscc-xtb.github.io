@@ -46,19 +46,6 @@ xtb --version
 
 {% include tip.html content='You can add the full path to your Bash shell configuration file (~/.bashrc) to automatically load **xtb** in new sessions.'%}
 
-## Conda Installation
-
-It is possible to install xtb from the conda-forge feedstock using the [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html) package manager:
-
-```bash
-conda install xtb -c conda-forge
-```
-This ensures an easy and managed installation with automatic dependency handling.
-
-
-{% include tip.html content='In case of slow Conda dependency resolution, we recommend using the lightweight alternative -- [Mamba](https://github.com/mamba-org/mamba) package manager.'%}
-
-
 
 ## Compilation 
 A more advanced approach is to compile xtb from the source code. Native compilation has certain advantages over precompiled binaries, such as producing a system-tailored binary and allowing modifications to the software in place.
