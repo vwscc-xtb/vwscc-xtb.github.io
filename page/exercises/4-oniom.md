@@ -510,3 +510,8 @@ Try running the calculation without this constraint and observe how the results 
 In addition, you can try to increase/decrease inner region size (e.g., take more metal nodes, or include organic linkers).
 
 ## Optional
+
+It is possible to integrate methods like aISS and ONIOM.
+Dock the CO<sub>2</sub> molecule onto the DALTES system in the same manner as described in the [Exercise]({{ "/page/exercises/mof" | absolute_url }}). You may need to pre-optimize both structures using GFN-FF.
+\\
+Define the inner region, including the docked CO<sub>2</sub> molecule, as demonstrated earlier.Perform the geometry optimization with the selected inner region.

@@ -24,9 +24,8 @@ For deeper insights into the mathematical construction and technical details of 
 [*Angew. Chem. Int. Ed.*, **2020**,  *59(36)*, 15665–15673.](https://doi.org/10.1002/anie.202004239)
 {: .fs-6 .fw-300 }
 
-- **Review 1 ||** Stefan Grimme, Marcel Muller, and Andreas Hansen. “A non-self-consistent tight-binding electronic structure potential in a polarized double-ζ basis set for all spd-block elements up to Z=
-86”.
-[*J. Chem. Phys.*, **2023**, *158(12)*, e01493.](https://doi.org/10.1002/wcms.1493)
+- **Review 1 ||** Christoph Bannwarth, Eike Caldeweyher, Sebastian Ehlert, Andreas Hansen, Philipp Pracht, Jakob Seibert, Sebastian Spicher, and Stefan Grimme. “Extended tight-binding quantum chemistry methods”.
+[*Wiley Interdisciplinary Reviews: Computational Molecular Science 11*, **2021**, *2*,  e1493.](https://doi.org/10.1002/wcms.1493)
 {: .fs-6 .fw-300 }
 
 - **Review 2 ||** Albert Katbashev, Marcel Stahn, Thomas Rose, Vahide Alizadeh, Marvin Friede, Christoph Plett, Pitt Steinbach, and Sebastian Ehlert, ”Overview on Building Blocks andApplications of Efficient and Robust Extended Tight Binding”.
@@ -49,15 +48,22 @@ For deeper insights into the mathematical construction and technical details of 
 [*Phys. Chem. Chem. Phys.*, **2020**, *22(14)*, 7169–7192.](https://doi.org/10.1039/C9CP06869D)
 {: .fs-6 .fw-300 }
 
-Please also visit the [xtb documentation](https://xtb-docs.readthedocs.io/en/latest/) and the xtb command line help and manual entries if you need more information or examples during this workshop.
-There would be also optional task that would need installation of *Conformer–Rotamer Ensemble Sampling Tool* ([CREST](https://crest-lab.github.io/crest-docs/)).
+- **CENSO ||** Grimme, Stefan, Fabian Bohle, Andreas Hansen, Philipp Pracht, Sebastian Spicher, and Marcel Stahn. "Efficient quantum chemical calculation of structure ensembles and free energies for nonrigid molecules." 
+[*The Journal of Physical Chemistry A 125*, **2021**, *19*, 4039-4054.](https://doi.org/10.1021/acs.jpca.1c00971)
+{: .fs-6 .fw-300 }
+
+Please also visit the [xtb documentation](https://xtb-docs.readthedocs.io/en/latest/) and the xtb command line help and manual entries if you need more information.
 
 
-## Subgroups
+## Workshop Format
 
-We offer three groups during the workshop:
-1. Beginners, who have almost never used any quantum chemistry
-(QC) program.
-2. Intermediates, who know how to use some QC program but not
-xtb.
-3. Advanced, who have already used xtb.
+The practical part of the workshop is designed as a guided problem-solving session.
+For the most part, the exercises are intended to be self-sufficient, requiring minimal guidance.
+However, if you have any questions or encounter difficulties, we, grimme-lab team, is here to support you.
+
+{% include warning.html content='As the sessions have 20–25 participants per instructor, we kindly ask you to be considerate and patient with both instructors and the other participants.'%} 
+
+We offer four groups during the workshop:
+1. Beginners, who have almost never used any quantum chemistry (QC) program (2 groups).
+2. Intermediates, who know how to use some QC program but not xtb (1 group).
+3. Advanced, who have already used xtb (1 group).

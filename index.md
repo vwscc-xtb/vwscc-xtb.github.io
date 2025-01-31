@@ -9,7 +9,7 @@ nav_order: 1
 Welcome to the {% include tooltip.html tool="xTB" tip=site.data.glossary.xtb %}  workshop in the course of the Virtual Winter School on Computational Chemistry 2025.
 
 
-{% include image.html file="toc.png" alt="CREST" max-width=800 %}
+{% include image.html file="toc.png" alt="CREST" max-width=750 %}
 
 
 ## Schedule

@@ -5,7 +5,7 @@ full_title: Metal
 parent: "Exercises"
 nav_order: 1
 has_children: false
-permalink: page/exercises/MOF
+permalink: page/exercises/mof
 ---
 # Metal-Organic Materials
 
