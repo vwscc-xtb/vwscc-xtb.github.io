@@ -308,6 +308,10 @@ N    -1.1902163   -0.5416441  -10.9298751
 </div>
 {% include defaulttab.html %}
 
+Perform *GFN2-xTB* single-point gas-phase calculations on both structures optimized with *GFN2-xTB* and check their energy difference.
+
+{% include note.html content=
+'To perform single-point calculations, replace **--opt** by **--sp**. The total energies are given in Hartree. To have more meaningful values, convert them to kcal/mol with 1 Eh = 627.5 kcal/mol.'%}
 
 ## Docking 
 
