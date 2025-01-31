@@ -83,6 +83,7 @@ meson compile -C build
 
 ## External Driver Programs
 During the workshop, we will use external programs, namely *Conformer–Rotamer Ensemble Sampling Tool* (CREST) and *Command-line Energetic Sorting* (CENSO).
+Note that CENSO is only required in the optional 6th exercise.
 The simplest way to install CREST is by downloading the [precompiled binaries](https://github.com/crest-lab/crest/releases), similar to xtb. Full installation instructions can be found [here](https://crest-lab.github.io/crest-docs/page/installation/install_basic.html).
 The installation instructions for CENSO can be found in the [official project repository](https://github.com/grimme-lab/CENSO).
 
