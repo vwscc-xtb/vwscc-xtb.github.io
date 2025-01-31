@@ -9,12 +9,11 @@ permalink: page/exercises/mof
 ---
 # Metal-Organic Materials
 
-To demonstrate possible applications of **xtb**, we want to start with metal-organic frameworks (MOFs, 3D) and cages (MOCs, 0D). Due to their diverse elemental composition, consisting of organic linkers and complexed metal atoms, and their usually large size of hundreds of atoms, they can be challenging to treat computationally. The broad parameterization of all elements up to at least Z=86 combined with the computational costs that are much cheaper than usual DFT or WFT methods make the GFN method a valuable tool for treating such systems.
+To demonstrate possible applications of **xtb**, we want to start with metal-organic frameworks (MOFs, 3D) and cages (MOCs, 0D). Due to their diverse elemental composition, consisting of organic linkers and complexed metal atoms, and their usually large size of hundreds of atoms, they can be challenging to treat computationally. The broad parameterization of all elements up to at least Z=86 combined with the computational costs that are much cheaper than usual DFT or WFT methods make the GFN methods a valuable tool for treating such systems.
 In the following, we present an excerpt from a workflow-like compilation of experiments with the HUMJIL MOC (CCDC nomenclature).
 
 ## Geometry Optimization
-Perform a geometry optimization for `humjil.xyz` in the gas phase and with THF as a solvent (via implicit solvation model - Analytically Linearized Poisson Boltzmann Model) at the *GFN2-xTB*
-and *GFN-FF* levels of theory.
+Perform a geometry optimization for `humjil.xyz` in the gas phase and with THF as a solvent (via an implicit solvation model, ALPB - Analytically Linearized Poisson Boltzmann Model) at the *GFN2-xTB* and *GFN-FF* levels of theory.
 Compare the 4 geometries by visually overlaying within e.g. [Chimera](https://www.cgl.ucsf.edu/chimera/) or with a (commandline) RMSD tool.
 
 

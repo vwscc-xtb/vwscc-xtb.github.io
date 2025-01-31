@@ -435,3 +435,4 @@ Watch the scan (with e.g. molden) in the xtbscan.log file and determine the two 
 
 ## Optional
 Try the scan with **maxcycle=5** and see what happens.
+This reduces the number of optimization steps for each point in the PES scan to speed up the scan.
