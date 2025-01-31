@@ -61,9 +61,9 @@ The practical part of the workshop is designed as a guided problem-solving sessi
 For the most part, the exercises are intended to be self-sufficient, requiring minimal guidance.
 However, if you have any questions or encounter difficulties, we, grimme-lab team, is here to support you.
 
-{% include warning.html content='As the sessions have 20–25 participants per instructor, we kindly ask you to be considerate and patient with both instructors and the other participants.'%} 
+{% include warning.html content='As the sessions have 10–15 participants per instructor, we kindly ask you to be considerate and patient with both instructors and the other participants.'%} 
 
-We offer four groups during the workshop:
-1. Beginners, who have almost never used any quantum chemistry (QC) program (2 groups).
+We offer 3(-4) groups during the workshop:
+1. Beginners, who have almost never used any quantum chemistry (QC) program (1 group).
 2. Intermediates, who know how to use some QC program but not xtb (1 group).
 3. Advanced, who have already used xtb (1 group).
