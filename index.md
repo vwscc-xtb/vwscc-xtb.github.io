@@ -17,11 +17,11 @@ Welcome to the {% include tooltip.html tool="xTB" tip=site.data.glossary.xtb %} 
 
 | Time         | Activity                                                                                          | Presenter         |
 |--------------|---------------------------------------------------------------------------------------------------|-------------------|
-| 10:00-11:00  | Introduction and overview of tight-binding theory                                                 | **Stefan Grimme** |
-| 11:00-11:15  | Break                                                                                             |                   |
-| 11:15-12:00  | Presentation of the workshop format, overview of the hands-on sessions, and software installation | **grimme-lab**      |
-| 12:00-13:00  | Lunch                                                                                             |                   |
-| 13:00-14:45  | Practical Session 1                                                                               | **grimme-lab**      |
+| 10:00-11:35  | Introduction and overview of tight-binding theory                                                 | **Stefan Grimme** |
+| 11:35-11:45  | Break                                                                                             |                   |
+| 11:45-12:15  | Presentation of the workshop format, overview of the hands-on sessions, and software installation | **grimme-lab**      |
+| 12:15-13:15  | Lunch                                                                                             |                   |
+| 13:15-14:45  | Practical Session 1                                                                               | **grimme-lab**      |
 | 14:45-15:00  | Break                                                                                             |                   |
 | 15:00-16:30  | Practical Session 2                                                                               | **grimme-lab**      |
 | 16:30-17:00  | Closing words on further developments and capabilities                                            | **Albert Katbashev** |
