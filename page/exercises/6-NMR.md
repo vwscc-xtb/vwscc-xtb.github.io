@@ -72,7 +72,8 @@ Next, you are going to refine the ensemble using DFT calculations.
 CREST uses GFN2-xTB as the default method, which produces ensemble rankings that are not accurate enough for NMR calculations.
 Therefore, it is necessary to refine the initial ensemble.
 You can do this using CENSO, which is supposed to automate the process of ensemble refinement and property calculation.
-Before starting your calculations, please configure the program paths in the provided configuration file, as well as the number of cores to use.
+**Before starting your calculations, please configure the program paths in the provided configuration file.**
+You can define the number of cores for CENSO with **--maxcores**.
 
  <!-- Tab links -->
 <div class="tab card">
@@ -186,11 +187,11 @@ retry_failed = True
 trange = [273.15, 373.15, 5]
 
 [paths]
-orcapath = /home/mctc/software/orca/6.0.1/orca
-xtbpath = /home/mctc/software/xtb/6.7.0/bin/xtb
-mpshiftpath = /home/mctc/software/turbomole/7.9/bin/em64t-unknown-linux-gnu_smp/mpshift
-escfpath = /home/mctc/software/turbomole/7.9/bin/em64t-unknown-linux-gnu_smp/escf
-orcaversion = 6.0.1
+orcapath = /path/to/orca/binary
+xtbpath = /path/to/xtb/binary
+mpshiftpath = 
+escfpath = 
+orcaversion = 
 {% endcapture %}
 {% include codecell.html content=struc_file style="font-size:10px" %}
 </div>
@@ -202,5 +203,14 @@ You will also find ensembles in xyz-format, as well as all files generated using
 \\
 In the printout of the program and in the 4 NMR.out file you will find the ensemble--averaged NMR parameters.
 Sodium trimethylsilylpropanesulfonate (DSS) is used as the NMR standard, and the spectrum is recorded at a frequency of 600 MHz in aqueous solution.
-Compare the ensemble--averaged values and the values for the lowest conformer only to the provided experimental reference values.
+Compare the ensemble--averaged values and the values for the lowest conformer only to the provided experimental reference values below.
 
+| δ (ppm) | Integral | Multiplet type | J (Hz) | Atom No. |
+| :---:   | :---:    | :---:          | :---:  | :---:    |
+| 3.16    | 1        | dd             | 15.55, 7.7 | 6    |
+| 3.23    | 1        | dd             | 16.10, 4.9 | 6    |
+| 3.98    | 1        | dd             | 7.73, 4.98 | 7    |
+| 7.09    | 1        | d              | 0.58       | 5    |
+| 7.9     | 1        | d              | 1.13       | 2    |
+
+{% include image.html file="l-histidine-atoms.png" alt="CREST" max-width=300 %}
