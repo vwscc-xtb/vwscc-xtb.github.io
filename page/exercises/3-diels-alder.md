@@ -15,12 +15,15 @@ A frequent experiment in computational chemistry is mechanism elucidation which 
 
 {% include image.html file="dielsalderrct.png" alt="CREST" max-width=600 %}
 
-Build the input structures (buta-1,3-diene and but-2-ene) yourself with a molecular editor, e.g. avogadro. Pay attention that the atom order is the same in the start and end structure.
+Build the input structures (buta-1,3-diene and but-2-ene) yourself with a molecular editor, e.g. avogadro.
+Pay attention that the atom order is the same in the start and end structure.
 
- <!-- Tab links -->
+Since the construction can be cumbersome, we also provide the start and end structures below.
+
+<!-- Tab links -->
 <div class="tab card">
-  <button class="tablinks tab-id-3-0" onclick="openTabId(event, 'struc-3-start', 'tab-id-3-start')" id="open-3-start">{{ site.data.icons.code }} <code>command</code></button>
-  <button class="tablinks tab-id-3-0" onclick="openTabId(event, 'struc-3-end', 'tab-id-3-end')">{{ site.data.icons.codefile }} <code>path.inp</code></button>
+  <button class="tablinks tab-id-3-0" onclick="openTabId(event, 'struc-3-start', 'tab-id-3-start')" id="open-3-start">{{ site.data.icons.codefile }} <code>start.xyz</code></button>
+  <button class="tablinks tab-id-3-0" onclick="openTabId(event, 'struc-3-end', 'tab-id-3-end')">{{ site.data.icons.codefile }} <code>end.xyz</code></button>
 </div>
 <!-- Tab content -->
 <div id="struc-3-start" class="tabcontent tab-id-3-end" style="text-align:justify">
