@@ -363,7 +363,7 @@ Use the docked structure from the previous exercise to perform a molecular dynam
 {% capture struc_file %}
 $md
    temp=298     # temperature in K
-   time=20.0   # duration in ps
+   time=20.0    # duration in ps
    dump=300.0   # coordinate dump interval in fs
    step=2.0     # stepsize in fs
    velo=false   # scale velocities
@@ -381,18 +381,18 @@ $end
 
 
 
-{% include note.html content= 'This calculation can take about 10 minutes.'%}
+{% include note.html content= 'This calculation can take about 10 minutes. To speed up this exercise you may reduce the length of the MD by modifying the `time` keyword in `md.inp`.'%}
 
 Before you list any content of this directory when the calculation has finished, remove all `scoord` files:
 ```bash
 rm scoord*
 ```
-Have a look at the simulation by opening the `xtb.trj` file with, e. g., [Molden](https://www.theochem.ru.nl/molden/)
+Have a look at the simulation by opening the `xtb.trj` file with, e. g., [Molden](https://www.theochem.ru.nl/molden/).
 You can do this already during the calculation.
 
 
 {% include note.html content=
-'If the MD takes too long, you might cancel it. The trajectory up to this point will still be available in the `xtb.trj` file. Alternatively, you can start a shorter MD by adjusting the *time=* keyword of the *md.inp* file.'%}
+'If the MD takes too long, you might cancel it. The trajectory up to this point will still be available in the `xtb.trj` file. Alternatively, you can start a shorter MD by adjusting the `time` keyword of the `md.inp` file as mentioned before.'%}
 
 ## Optional
 **xtb** can also be helpful in generating structures relevant to reaction mechanism exploration. For example, the Buchwald Hartwig amination of bromobenzene and (S)-3-amino-2-methylpropan-1-ol with a Pd(BINAP) catalyst involves the complexation of the intermediate catalyst by the amine. Try to generate this complex with the following input

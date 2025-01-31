@@ -22,8 +22,17 @@ Since the construction can be cumbersome, we also provide the start and end stru
 
 <!-- Tab links -->
 <div class="tab card">
-  <button class="tablinks tab-id-3-start" onclick="openTabId(event, 'struc-3-start', 'tab-id-3-start')" id="open-3-start">{{ site.data.icons.codefile }} <code>start.xyz</code></button>
-  <button class="tablinks tab-id-3-end" onclick="openTabId(event, 'struc-3-end', 'tab-id-3-end')">{{ site.data.icons.codefile }} <code>end.xyz</code></button>
+  <button
+    class="tablinks tab-id-3-start"
+    onclick="openTabId(event, 'struc-3-start', 'tab-id-3-start')"
+    id="open-3-start">
+    {{ site.data.icons.codefile }} <code>start.xyz</code>
+  </button>
+  <button
+    class="tablinks tab-id-3-end"
+    onclick="openTabId(event, 'struc-3-end', 'tab-id-3-end')">
+    {{ site.data.icons.codefile }} <code>end.xyz</code>
+  </button>
 </div>
 <!-- Tab content -->
 <div id="struc-3-start" class="tabcontent tab-id-3-start" style="text-align:justify">
