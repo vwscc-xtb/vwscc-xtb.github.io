@@ -27,7 +27,7 @@ Since the construction can be cumbersome, we also provide the start and end stru
 </div>
 <!-- Tab content -->
 <div id="struc-3-start" class="tabcontent tab-id-3-start" style="text-align:justify">
-{% capture struc_file %}
+{% capture struc_file_start %}
 22
 
 C         -1.28276        2.69140        0.40114
@@ -53,10 +53,10 @@ H         -5.00213        0.76050       -0.33223
 H         -2.14406        3.23510        0.77856
 H         -2.20376        0.84820        0.77610
 {% endcapture %}
-{% include codecell.html content=struc_file style="font-size:10px" %}
+{% include codecell.html content=struc_file_start style="font-size:10px" %}
 </div>
 <div id="struc-3-end" class="tabcontent tab-id-3-end" style="text-align:justify">
-{% capture struc_file %}
+{% capture struc_file_end %}
 22
 
 C         -1.60263        2.81026       -0.14343
@@ -82,7 +82,7 @@ H         -4.94744        0.99186       -0.74611
 H         -2.09637        3.20130        0.77678
 H         -1.92079        0.98738        1.01317
 {% endcapture %}
-{% include codecell.html content=struc_file style="font-size:10px" %}
+{% include codecell.html content=struc_file_end style="font-size:10px" %}
 </div>
 {% include defaulttab.html id="open-3-start" %}
 
