@@ -26,7 +26,7 @@ Since the construction can be cumbersome, we also provide the start and end stru
   <button class="tablinks tab-id-3-end" onclick="openTabId(event, 'struc-3-end', 'tab-id-3-end')">{{ site.data.icons.codefile }} <code>end.xyz</code></button>
 </div>
 <!-- Tab content -->
-<div id="struc-3-start" class="tabcontent tab-id-3-end" style="text-align:justify">
+<div id="struc-3-start" class="tabcontent tab-id-3-start" style="text-align:justify">
 {% capture struc_file %}
 22
 
@@ -123,7 +123,7 @@ The resulting path should be written to `xtbpath.xyz`.
 ## Growing String Method
 Another option for reaction path search is the growing string method (GSM) developed by the Zimmermann group and adapted for xtb. To set it up, you'll need `inpfileq` (provided), `ograd` (provided) which you can download [here](https://github.com/grimme-lab/molecularGSM/releases/tag/rev1).
 
-First. unpack the downloaded archive and place the `gsm.orca` program in your path.
+First, unpack the downloaded archive and place the `gsm.orca` program in your path.
 Next, go to your working directory and place `inpfileq` and `ograd` there.
 Then, you have to create a direcotry named `scratch` and move the `tm2orca.py` script into it.
 Concatenate the start.xyz and end.xyz file into `initial0000.xyz` and move the latter also into the scratch directory. 
